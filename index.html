@@ -115,8 +115,14 @@
   .hero-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #1C1A17 0%, #2E2418 40%, #3D2E1A 70%, #1C1A17 100%);
+    background: url('hero-bg.png') center center / cover no-repeat;
     z-index: 1;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10,8,5,0.82) 0%, rgba(20,15,8,0.70) 40%, rgba(30,22,12,0.50) 70%, rgba(10,8,5,0.60) 100%);
   }
 
   /* Animated fluid blobs */
@@ -131,7 +137,7 @@
     position: absolute;
     border-radius: 50%;
     filter: blur(80px);
-    opacity: 0.35;
+    opacity: 0.15;
     animation: drift 12s ease-in-out infinite;
   }
   .blob-1 {
@@ -166,7 +172,7 @@
     inset: 0;
     z-index: 3;
     overflow: hidden;
-    opacity: 0.5;
+    opacity: 0.25;
   }
   .shimmer-line {
     position: absolute;
